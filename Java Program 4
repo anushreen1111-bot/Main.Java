@@ -1,0 +1,36 @@
+class MathOperations {
+
+    // Multiply two integers
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Multiply three integers
+    int multiply(int a, int b, int c) {
+        return a * b * c;
+    }
+
+    // Multiply two floating-point numbers
+    double multiply(double a, double b) {
+        return a * b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        MathOperations obj = new MathOperations();
+
+        // Multiplying two integers
+        System.out.println("Product of 2 integers: " +
+                           obj.multiply(10, 20));
+
+        // Multiplying three integers
+        System.out.println("Product of 3 integers: " +
+                           obj.multiply(5, 4, 3));
+
+        // Multiplying two floating-point numbers
+        System.out.println("Product of 2 floating-point numbers: " +
+                           obj.multiply(2.5, 4.0));
+    }
+}
