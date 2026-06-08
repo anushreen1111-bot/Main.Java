@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class Shape {
+
+    // Overloaded method to calculate area of a circle
+    double area(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    // Overloaded method to calculate area of a rectangle
+    double area(double length, double breadth) {
+        return length * breadth;
+    }
+
+    // Overloaded method to calculate area of a triangle
+    double area(float base, float height) {
+        return 0.5 * base * height;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Shape shape = new Shape();
+
+        // Circle
+        System.out.print("Enter radius of the circle: ");
+        double radius = sc.nextDouble();
+        System.out.println("Area of Circle = " + shape.area(radius));
+
+        // Rectangle
+        System.out.print("\nEnter length of the rectangle: ");
+        double length = sc.nextDouble();
+        System.out.print("Enter breadth of the rectangle: ");
+        double breadth = sc.nextDouble();
+        System.out.println("Area of Rectangle = " + shape.area(length, breadth));
+
+        // Triangle
+        System.out.print("\nEnter base of the triangle: ");
+        float base = sc.nextFloat();
+        System.out.print("Enter height of the triangle: ");
+        float height = sc.nextFloat();
+        System.out.println("Area of Triangle = " + shape.area(base, height));
+
+        sc.close();
+    }
+}
